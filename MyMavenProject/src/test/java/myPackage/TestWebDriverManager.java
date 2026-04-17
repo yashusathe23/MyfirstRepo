@@ -11,13 +11,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestWebDriverManager {
 
 	@Test
-	public void a() throws Exception {
+	public void a()  {
 		WebDriverManager.edgedriver().setup();
 		WebDriver driver = new EdgeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-		Thread.sleep(2000);;
-		driver.get("https://facebook.com");
+        driver.get("https://facebook.com");
 		driver.getTitle();
 		driver.close();
 
